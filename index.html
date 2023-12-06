@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Hamburger Menu</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background: url('pexels-cátia-matos-1072179.jpg')no-repeat center center/cover;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-family: monospace;
+            padding: 1.5rem;
+            /* background: linear-gradient(rgb(110, 110, 219),rgb(121, 235, 235)); */
+        }
+        .container a{
+            text-decoration: none;
+            color: white;
+        }
+        .container a:hover{
+            text-decoration: underline;
+        }
+        .container span{
+            color: white;
+        }
+        .list{
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        #toggle ,label{
+            display: none;
+        }
+        label{
+            color: white;
+        }
+
+        @media only screen and (max-width:700px){
+            .menu {
+                width: 100%;
+                max-height: 0px;
+                overflow: hidden;
+            }
+            label{
+                display: inline-flex;
+            }
+            #toggle:checked~.menu{
+                max-height: 100%;
+            }
+            .list{
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="container">
+        <span>LOGO</span>
+        <label for="toggle"><span class="material-symbols-outlined">menu</span></label>
+        <input type="checkbox" id="toggle">
+
+        <div class="menu">
+            <ul class="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    
+</body>
+</html>
